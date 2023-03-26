@@ -1,0 +1,3 @@
+.cal-btn{
+    @apply h-16 font-semibold text-2xl antialiased bg-gray-900 shadow-inner drop-shadow-lg rounded-2xl
+}
