@@ -21,6 +21,7 @@ input::-webkit-inner-spin-button {
 }
 
 body {
+  @apply transition duration-300;
   font-family: 'Inter', sans-serif;
   background-color: #2A2D37;
   margin: 0;

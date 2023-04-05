@@ -1,14 +1,15 @@
 import { useContext } from "react";
-import { CalculatorContext } from "./App";
+import { CalculatorContext, ThemeContext } from "./App";
 import "./Button.css"
 import 'remixicon/fonts/remixicon.css'
 
 function Button(props) {
 
     const { value, setValue } = useContext(CalculatorContext);
+    const { theme } = useContext(ThemeContext);
 
     function btnClicked(e) {
-        console.log(props.symbol);
+        console.log(props);
         switch (props.symbol) {
             case "AC":
                 setValue("");
@@ -36,7 +37,7 @@ function Button(props) {
     }
 
     return(
-        <button onClick={btnClicked} className={props.className + " cal-btn"}>
+        <button onClick={btnClicked} className={props.className + " cal-btn " + (theme==="dark"?"bg-gray-900":"bg-[#ffffff] ")}>
            {props.children}
             </button>
     );
